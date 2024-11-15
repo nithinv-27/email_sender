@@ -1,0 +1,35 @@
+.btn:hover{
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+.btn{
+    background-color:black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 1em;
+}
+
+#prompt_text{
+    width: 500px;
+    resize: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#prompt_answer{
+    width: 500px;
+    resize: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* .answer_box{
+    display: none;
+} */
