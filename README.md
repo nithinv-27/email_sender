@@ -51,7 +51,17 @@ A web application for uploading and processing CSV files with a customizable tab
     pip install -r requirements.txt
     ```
 
-4. Add your api keys and email id to keys.env file.  
+4. Create a file named `keys.env` in the root directory of the project with the following content:
+
+    ```
+    GROQ_API_KEY=your-groq-api-key
+    SENDGRID_API_KEY=your-sendgrid-api-key
+    SENDER_EMAIL=your-email@example.com
+    ```
+
+    - Replace `your-groq-api-key` with your Groq API key.
+    - Replace `your-sendgrid-api-key` with your SendGrid API key.
+    - Replace `your-email@example.com` with your sender email address. 
 
 5. Run the FastAPI backend:
 
