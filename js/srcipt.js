@@ -8,6 +8,6 @@ document.querySelector("#form_id").addEventListener("submit", (event)=>{
         body:form_data
     });
     
-    window.location.assign("http://127.0.0.1:5500/prompt.html");
+    // window.location.assign("http://127.0.0.1:5500/prompt.html");
 
 })

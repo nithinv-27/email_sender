@@ -4,7 +4,7 @@ import numpy as np
 from langchain_community.utilities import SQLDatabase
 from sqlalchemy import create_engine
 from langchain_community.agent_toolkits import create_sql_agent
-from setup_groq import llm
+from setup_groq import LLM
 
 def create_db(file):
     # Check if "sample.db" exists and remove it to prevent conflicts
@@ -25,7 +25,7 @@ def create_db(file):
     return db
 
 def get_answer(db, prompt):
-    agent_executor = create_sql_agent(llm, db=db, verbose=True)
+    agent_executor = create_sql_agent(LLM, db=db, verbose=True)
     
     # # Execute the query and get the result
     # \"SELECT 'Company Name' FROM sample LIMIT 1\". However, I cannot execute this query directly
