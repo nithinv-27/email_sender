@@ -1,13 +1,62 @@
-Clone this repo.
+# CSV Parser with Editable Table
 
-Enter your GROQ API key in setup_grop.py script
+A web application for uploading and processing CSV files with a customizable table where users can input and edit data. The application integrates with a backend to process the prompts, and it also provides functionality to send emails based on the processed data.
 
-Enter SENDGRID API key in send_grid.py script
+## Features
 
-Run main.py, uvicorn main:app --reload
+- Upload a CSV file and parse its content.
+- Display the data in an editable HTML table with input fields for each row.
+- Replace placeholders in the prompts with corresponding data from the CSV.
+- Submit the prompts to a backend for processing.
+- Dynamically update the table with returned processed prompts.
+- Collect email addresses and processed prompts to send via email.
+- Responsive design for better usability across devices.
 
-run index.html using live server.
+## Technologies
 
-upload a sample csv file.
+- **Frontend**: HTML, CSS, JavaScript (Vanilla JS)
+- **Backend**: FastAPI, Python
+- **Libraries/Frameworks**:
+  - **Pandas** for CSV parsing
+  - **Requests** for API communication
+  - **SendGrid** for email sending
+  - **Groq** for model inference
 
-Enter prompt
+## Installation
+
+### Prerequisites
+
+- Python 3.x
+- FastAPI and related dependencies
+
+### Backend Setup
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/your-username/csv-parser.git
+    cd csv-parser
+    ```
+
+2. Create and activate a virtual environment:
+
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    ```
+
+3. Install the dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Add your api keys and email id to keys.env file.  
+
+5. Run the FastAPI backend:
+
+    ```bash
+    uvicorn main:app --reload
+    ```
+    
+6. Open the `index.html` in your browser or use a simple server like `live-server` to view the application.
