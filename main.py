@@ -5,9 +5,9 @@ import re
 import pandas as pd
 from fastapi import FastAPI, File, UploadFile, Form
 from fastapi.middleware.cors import CORSMiddleware
-from read_csv import get_answer, extract_placeholders
 from utils import convert_to_lowercase, invoke_llm
 from setup_groq import LLM
+from send_grid import send_email
 import multiprocessing
 from threading import Thread
 import requests
@@ -117,6 +117,7 @@ async def answer_endpoint(request: PromptRequest):
 @app.post("/send-email")
 async def send_email_endpoint(emails: List[EmailRequest]):
     for email_data in emails:
+        send_email(email_data.email, email_data.prompt)
         # Replace this with actual email sending logic
         print(f"Sending email to: {email_data.email}")
         print(f"Email content: {email_data.prompt}")

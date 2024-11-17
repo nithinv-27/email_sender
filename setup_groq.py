@@ -7,7 +7,7 @@ if "GROQ_API_KEY" not in os.environ:
     print("No api keyyyyy")
 
 LLM = ChatGroq(
-    model="mixtral-8x7b-32768",
+    model="mixtral-8x7b-32768", 
     temperature=0.0,
     max_retries=2,
     # other params...
