@@ -1,6 +1,9 @@
 import os
 import getpass
 from langchain_groq import ChatGroq
+from dotenv import load_dotenv
+
+load_dotenv("keys.env")
 
 if "GROQ_API_KEY" not in os.environ:
     os.environ["GROQ_API_KEY"] = "Your API Key"

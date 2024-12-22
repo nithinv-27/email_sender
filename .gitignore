@@ -1,3 +1,5 @@
 *.env
 *env
 *.pyc
+my_data.csv
+updated_data.csv
